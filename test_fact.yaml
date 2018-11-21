@@ -10,7 +10,7 @@
   - name: Set fact
     set_fact:
       somevar_fact: true
-    when: "{{ somevar }} != ''"
+    when: somevar != ""
 
   - name: Set fact when somevar is define
     copy:
