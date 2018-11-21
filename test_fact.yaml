@@ -1,0 +1,20 @@
+---
+
+- hosts: all
+  tasks:
+  - name: Make Ansible facts directory
+    file:
+      path: /etc/ansible/facts.d
+      state: directory
+
+  - name: Set fact
+    set_fact:
+      somevar_fact: true
+    when: somevar != ""
+
+  - name: Set fact when somevar is define
+    copy:
+      dest: /etc/ansible/facts.d
+      content: "somevar_fact: {{ somevar_fact | default(false) }}"
+      
+
