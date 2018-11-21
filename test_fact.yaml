@@ -15,7 +15,7 @@
   - name: Set fact when somevar is define
     copy:
       dest: /etc/ansible/facts.d/custom.fact
-      content: "somevar_fact: {{ somevar_fact | default(false) }}"
+      content: "somevar_fact={{ somevar_fact | default(false) }}"
 
   - name: Re-gather facts
     setup:
