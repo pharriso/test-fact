@@ -16,8 +16,8 @@
     copy:
       dest: /etc/ansible/facts.d/custom.fact
       content: |
-        "[defaults]
-        "somevar_fact={{ somevar_fact | default(false) }}" 
+        [defaults]
+        somevar_fact={{ somevar_fact | default(false) }}
 
   - name: Re-gather facts
     setup:
