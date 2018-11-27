@@ -16,4 +16,4 @@
     set_fact:
       my_var: false
       cacheable: True
-    when: somevar == "" and somevar is not defined
+    when: somevar == "" or somevar is not defined
