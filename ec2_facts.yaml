@@ -6,3 +6,4 @@
   tasks:
   - name: Gather EC2 Instances Facts
     ec2_instance_facts:
+      region: eu-west-1
