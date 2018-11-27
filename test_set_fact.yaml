@@ -10,7 +10,7 @@
     set_fact:
       my_var: true
       cacheable: True
-    when: somevar != "" 
+    when: somevar != "" and somevar is defined
 
   - name: Set fact false
     set_fact:
