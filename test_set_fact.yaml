@@ -6,8 +6,14 @@
 
   tasks:
 
-  - name: Set fact
+  - name: Set fact true
     set_fact:
       my_var: true
       cacheable: True
-    when: somevar != "" and somevar is defined
+    when: somevar != "" 
+
+  - name: Set fact false
+    set_fact:
+      my_var: false
+      cacheable: True
+    when: somevar == "" and somevar is not defined
