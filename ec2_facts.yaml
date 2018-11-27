@@ -2,7 +2,7 @@
 
 - hosts: all
   connection: local
-  gather_facts: false
+  gather_facts: true
   tasks:
   - name: Gather EC2 Instances Facts
     ec2_instance_facts:
