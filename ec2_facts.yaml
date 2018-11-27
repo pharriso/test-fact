@@ -1,0 +1,8 @@
+---
+
+- hosts: all
+  connection: local
+  gather_facts: false
+  tasks:
+  - name: Gather EC2 Instances Facts
+    ec2_instance_facts:
