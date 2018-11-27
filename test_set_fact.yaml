@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  gather_facts: true
+  connection: local
+
+  tasks:
+
+  - name: Set fact
+    set_fact:
+      my_var: true
+      cacheable: True
+    when: somevar != ""
